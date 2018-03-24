@@ -35,10 +35,10 @@ namespace HideEmptyTechTreeNodes
         // "Hide Empty Nodes", toolTip = "Enable to hide nodes with no parts or part upgrades in them.\nTech lines will connect to non-empty nodes as well.\n\nDisable to see all nodes."
         [GameParameters.CustomParameterUI("#autoLOC_HETTN_01106", toolTip = "#autoLOC_HETTN_01107")]
         public bool forceHideEmpty = true;
-        // Remove Empty Vertical Space, toolTip = "Shifts nodes vertically to remove the empty space created by rows of hidden tech tree nodes."
+        // Remove Empty Vertical Space, toolTip = "Shifts nodes up/down to remove the empty space created by rows of hidden tech tree nodes."
         [GameParameters.CustomParameterUI("#autoLOC_HETTN_01108", toolTip = "#autoLOC_HETTN_01109")]
         public bool shiftVertically = false;
-        // Remove Empty Horizontal Space, toolTip = "Shifts nodes horizontally to remove the empty space created by columns of hidden tech tree nodes."
+        // Remove Empty Horizontal Space, toolTip = "Shifts left/right horizontally to remove the empty space created by columns of hidden tech tree nodes."
         [GameParameters.CustomParameterUI("#autoLOC_HETTN_01110", toolTip = "#autoLOC_HETTN_01111")]
         public bool shiftHorizontally = false;
 

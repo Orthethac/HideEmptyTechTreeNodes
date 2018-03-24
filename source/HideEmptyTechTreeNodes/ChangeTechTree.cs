@@ -2,6 +2,7 @@
 // Goes through a bunch of conditions to change the parents from hidden tech nodes to ones that aren't.
 // Lots of debugging code, haha.
 //
+// v1.0.2 - 2018/03/24 - Recompiled for KSPv1.4.1
 // v1.0.1 - 2017/10/07 - Recompiled for KSPv1.3.1
 // v1.0.0 - 2017/09/03 - Added option to change research requirements to "Default", "Any", or "All"; Added option to remove empty space created from rows/columns of empty nodes
 // v0.8.0 - 2017/06/02 - Updated to KSPv1.3.0 (fixed new bug in settings)
@@ -198,10 +199,10 @@ namespace HideEmptyTechTreeNodes
         #endregion
 
 
-        // ----------------------------------------------------
+        // -------------------------------------------------------------------
         // Goes through several logic conditions based on empty nodes and node 
         // positions to change node parents. Main plugin work is done here.
-        // ----------------------------------------------------
+        // -------------------------------------------------------------------
         #region NODE PARENT CHANGES
         public void ChangeParents()
         {
@@ -1191,7 +1192,7 @@ namespace HideEmptyTechTreeNodes
                 posYList[i] = nodesList[i].pos.y;
             }
 
-            // Get mode of node positions.
+            // Get mode of all node positions.
             float modeX = ModeDiff(posXList);
             float modeY = ModeDiff(posYList);
 
@@ -1570,7 +1571,7 @@ namespace HideEmptyTechTreeNodes
         // ----------------------------------------------------
         public List<HENode> ReplaceGroupsX(List<HENode> nodesList, int i, int quadrant, float diffPosition)
         {
-            if (diffPosition != 0) ;
+            //if (diffPosition != 0) ;
             HETTNSettings.Log2("    Shifting group {1} by {0}...", i, diffPosition);
 
             GetSigns sign = new GetSigns(quadrant);
@@ -1584,7 +1585,7 @@ namespace HideEmptyTechTreeNodes
 
         public List<HENode> ReplaceGroupsY(List<HENode> nodesList, int i, int quadrant, float diffPosition)
         {
-            if (diffPosition != 0) ;
+            //if (diffPosition != 0) ;
             HETTNSettings.Log2("    Shifting group {1} by {0}...", i, diffPosition);
 
             GetSigns sign = new GetSigns(quadrant);

@@ -1,0 +1,195 @@
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.UI.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\Mono.Security.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\CodeUpdate\HideEmptyTechTreeNodes\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta2)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta2)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta2)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta2)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta2)\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta2)\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta2)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta2)\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta2)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta2)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta)\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta)\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta)\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.1(beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.1(beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.1(beta)\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.1(beta)\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.1(beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.1(beta)\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.1(beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.1(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.1(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.1(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.2(beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.2(beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.2(beta)\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.2(beta)\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.2(beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.2(beta)\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.2(beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.2(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.2(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.2(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.3(beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.3(beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.3(beta)\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.3(beta)\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.3(beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.3(beta)\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.3(beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.3(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.3(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.3(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.4(beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.4(beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.4(beta)\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.4(beta)\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.4(beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.4(beta)\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.4(beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.4(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.4(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.7.4(beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.UI.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Security.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\(beta)HETTN_v0.7.5\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.UI.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Security.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.UI.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Security.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.UI.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Security.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b2 (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.UI.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Security.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b3 (beta)\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.UI.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\TrackIRUnity.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Security.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v0.9.0b4 (beta) - Cleanup\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.UI.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\KSPTrackIR.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Security.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.1\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.xml
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\HideEmptyTechTreeNodes.pdb
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\Assembly-CSharp.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\UnityEngine.UI.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\KSPTrackIR.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\KSPAssets.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\Mono.Cecil.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\Ionic.Zip.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\TDx.TDxInput.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\bin\Debug\RedShellSDK.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.dll
+C:\Users\Eric\Desktop\KSP Modding\KSP_HETTN_Work\Releases\HETTN_v1.0.2\source\HideEmptyTechTreeNodes\obj\Debug\HideEmptyTechTreeNodes.pdb
