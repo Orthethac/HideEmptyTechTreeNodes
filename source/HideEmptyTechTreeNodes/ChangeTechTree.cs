@@ -28,6 +28,7 @@ using KSP.Localization;
 using KSP.UI.Screens;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 //using System.Text;
 //using System.Threading.Tasks;
@@ -45,12 +46,12 @@ namespace HideEmptyTechTreeNodes
         #region SETUP
         // Hide Empty Tech Tree Nodes tech tree file path.
         private static string hettnTechTreeName = "HETTN.TechTree";
-        private static string hettnTechTreeUrl = "GameData/HideEmptyTechTreeNodes/" + hettnTechTreeName;
+        private static string hettnTechTreeUrl = Path.Combine("GameData, "HideEmptyTechTreeNodes", hettnTechTreeName);
         internal static bool IsHettnUrlCreated = false;
 
         // Default and backup tech tree paths. Default is created once, on scene startup. (Add squad backup?)
         private static string defaultTechTreeUrl = string.Empty;
-        private static string backupTechTreeUrl = "GameData/ModuleManager.TechTree";
+        private static string backupTechTreeUrl = Path.Combine("GameData, "ModuleManager.TechTree");
 
         // Settings.
         internal HETTNSettings hettnSettings;
