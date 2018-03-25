@@ -2,6 +2,7 @@
 // Goes through a bunch of conditions to change the parents from hidden tech nodes to ones that aren't.
 // Lots of debugging code, haha.
 //
+// v1.0.3 - 2018/03/25 - Path file separator fix (thx @nightengale)
 // v1.0.2 - 2018/03/24 - Recompiled for KSPv1.4.1
 // v1.0.1 - 2017/10/07 - Recompiled for KSPv1.3.1
 // v1.0.0 - 2017/09/03 - Added option to change research requirements to "Default", "Any", or "All"; Added option to remove empty space created from rows/columns of empty nodes
