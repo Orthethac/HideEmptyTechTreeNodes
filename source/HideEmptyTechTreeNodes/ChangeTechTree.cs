@@ -51,8 +51,16 @@ namespace HideEmptyTechTreeNodes
         internal static bool IsHettnUrlCreated = false;
 
         // Default and backup tech tree paths. Default is created once, on scene startup. (Add squad backup?)
+        // NOTE: Lisias says: Perhaps it should not be necessary: at startup, if something goes wrong and the modded TechTree
+        //          is not usable, KSP automatically uses the one on the GameData/Squad's folder.
+        //       By fetching the current TechTree, whatever it is, you should be fine - at the very worst, you will get the Squad's
+        //          default anyway.
+        //       Be advised that the Module Manaber 3.0.7 will "steal back" the Tech Tree every time the Space Center is loaded.
+        //          https://github.com/sarbian/ModuleManager/blob/master/ModuleManager/CustomConfigsManager.cs
+        //       However, my fork just check it at first startup, and thrust that whoever changes it, knows what he's doing.
+        //          https://github.com/net-lisias-kspu/ModuleManager/blob/master/Source/ModuleManager/CustomConfigsManager.cs
         private static string defaultTechTreeUrl = string.Empty;
-        private static string backupTechTreeUrl = Path.Combine("GameData", "ModuleManager.TechTree");
+        private static string backupTechTreeUrl = null; // This is filled below!
 
         // Settings.
         internal HETTNSettings hettnSettings;
