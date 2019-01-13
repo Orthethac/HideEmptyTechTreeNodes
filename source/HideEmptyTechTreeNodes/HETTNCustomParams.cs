@@ -35,10 +35,16 @@ namespace HideEmptyTechTreeNodes
         // "Hide Empty Nodes", toolTip = "Enable to hide nodes with no parts or part upgrades in them.\nTech lines will connect to non-empty nodes as well.\n\nDisable to see all nodes."
         [GameParameters.CustomParameterUI("#autoLOC_HETTN_01106", toolTip = "#autoLOC_HETTN_01107")]
         public bool forceHideEmpty = true;
-        // Remove Empty Vertical Space, toolTip = "Shifts nodes vertically to remove the empty space created by rows of hidden tech tree nodes."
+        // "Use RDNode Settings", toolTip = "Enable to use the "hideEmpty" field of RDNode modules to hide empty nodes.\nEdit the fields via ModuleManager.\n\nDisable to auto-hide all empty nodes (default)."
+        [GameParameters.CustomParameterUI("#autoLOC_HETTN_01112", toolTip = "#autoLOC_HETTN_01113")]
+        public bool forceHideManual = false;
+        // "Transfer Science", toolTip = "Sets how science cost from empty nodes is transfered to their child nodes.\nScience will transfer evenly, as a multiple of 5.\n\nDefault (Do not transfer science)\nScience Wall (Transfer to children)\nPropagate Science (Transfer to all descendants)"
+        [GameParameters.CustomFloatParameterUI("#autoLOC_HETTN_01114", toolTip = "#autoLOC_HETTN_01115")]
+        public string propagateScience = Localizer.Format("#autoLOC_HETTN_01501"); // "Default"
+        // Remove Empty Vertical Space, toolTip = "Shifts nodes up/down to remove the empty space created by rows of hidden tech tree nodes."
         [GameParameters.CustomParameterUI("#autoLOC_HETTN_01108", toolTip = "#autoLOC_HETTN_01109")]
         public bool shiftVertically = false;
-        // Remove Empty Horizontal Space, toolTip = "Shifts nodes horizontally to remove the empty space created by columns of hidden tech tree nodes."
+        // Remove Empty Horizontal Space, toolTip = "Shifts left/right horizontally to remove the empty space created by columns of hidden tech tree nodes."
         [GameParameters.CustomParameterUI("#autoLOC_HETTN_01110", toolTip = "#autoLOC_HETTN_01111")]
         public bool shiftHorizontally = false;
 
@@ -55,6 +61,8 @@ namespace HideEmptyTechTreeNodes
             // Otherwise it depends on the value of below boolean. If it's false then disable and return false.
             if (forceHideEmpty == false)
             {
+                forceHideManual = false;
+                propagateScience = Localizer.Format("#autoLOC_HETTN_01501"); // "Default (Do not transfer science)"
                 shiftVertically = false;
                 shiftHorizontally = false;
                 return false;
@@ -74,6 +82,16 @@ namespace HideEmptyTechTreeNodes
                     Localizer.Format("#autoLOC_HETTN_01403"), // "All"
                 });
                 return researchRequirementsList;
+            }
+            if (member.Name == "propagateScience")
+            {
+                List<string> propogateScienceList = new List<string>(new string[]
+                {
+                    Localizer.Format("#autoLOC_HETTN_01501"), // "Default",
+                    Localizer.Format("#autoLOC_HETTN_01502"), // "Science Wall",
+                    Localizer.Format("#autoLOC_HETTN_01503"), // "Propagate Science
+                });
+                return propogateScienceList;
             }
             else
             {

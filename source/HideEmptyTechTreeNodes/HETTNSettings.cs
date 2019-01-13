@@ -18,10 +18,12 @@ namespace HideEmptyTechTreeNodes
         internal HETTNCustomParams_Zoom HETTNSettingsParams2 = new HETTNCustomParams_Zoom();
         internal HETTNCustomParams_Misc HETTNSettingsParams3 = new HETTNCustomParams_Misc();
 
-        //// Default values (same as default values from HETTNCustomParams).
+        // Default values (same as default values from HETTNCustomParams).
         internal string researchRequirements = "Default";
         internal bool forceHideUnresearchable = false;
         internal bool forceHideEmpty = true;
+        internal bool forceHideManual = false;
+        internal string propagateScience = "Default (Do not transfer science)";
         internal bool shiftVertically = false;
         internal bool shiftHorizontally = false;
 
@@ -50,6 +52,8 @@ namespace HideEmptyTechTreeNodes
                 researchRequirements = HETTNSettingsParams1.researchRequirements;
                 forceHideUnresearchable = HETTNSettingsParams1.forceHideUnresearchable;
                 forceHideEmpty = HETTNSettingsParams1.forceHideEmpty;
+                forceHideManual = HETTNSettingsParams1.forceHideManual;
+                propagateScience = HETTNSettingsParams1.propagateScience;
                 shiftVertically = HETTNSettingsParams1.shiftVertically;
                 shiftHorizontally = HETTNSettingsParams1.shiftHorizontally;
             }

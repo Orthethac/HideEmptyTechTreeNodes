@@ -108,6 +108,7 @@ namespace HideEmptyTechTreeNodes
         #region CHANGE VIEWABLE
         public void ChangeViewable()
         {
+            // Option is disabled. Return right away.
             if (hettnSettings.forceHideUnresearchable == false)
             {
                 HETTNSettings.Log2("Hide Unresearchable Nodes option is disabled.");

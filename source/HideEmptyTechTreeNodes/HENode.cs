@@ -36,6 +36,8 @@ namespace HideEmptyTechTreeNodes
 
         public Parent[] parents;
 
+        public List<string> children = new List<string>();
+
         // ETT fix 1 of 5.
         public Unlocks unlocks;
 

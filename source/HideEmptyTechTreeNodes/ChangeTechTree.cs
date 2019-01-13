@@ -2,6 +2,11 @@
 // Goes through a bunch of conditions to change the parents from hidden tech nodes to ones that aren't.
 // Lots of debugging code, haha.
 //
+// v1.1.0 - 2018/01/12 - Recompiled for KSPv1.6.1; Added manual-hide option; Added science transfer option
+// v1.0.5 - 2018/10/27 - Recompiled for KSPv1.5.1
+// v1.0.4 - 2018/05/06 - Added .version file (no changes to any code)
+// v1.0.3 - 2018/03/25 - Path file separator fix (thx @nightingale)
+// v1.0.2 - 2018/03/24 - Recompiled for KSPv1.4.1
 // v1.0.1 - 2017/10/07 - Recompiled for KSPv1.3.1
 // v1.0.0 - 2017/09/03 - Added option to change research requirements to "Default", "Any", or "All"; Added option to remove empty space created from rows/columns of empty nodes
 // v0.8.0 - 2017/06/02 - Updated to KSPv1.3.0 (fixed new bug in settings)
@@ -27,6 +32,7 @@ using KSP.Localization;
 using KSP.UI.Screens;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 //using System.Text;
 //using System.Threading.Tasks;
@@ -44,12 +50,12 @@ namespace HideEmptyTechTreeNodes
         #region SETUP
         // Hide Empty Tech Tree Nodes tech tree file path.
         private static string hettnTechTreeName = "HETTN.TechTree";
-        private static string hettnTechTreeUrl = "GameData/HideEmptyTechTreeNodes/" + hettnTechTreeName;
+        private static string hettnTechTreeUrl = Path.Combine(Path.Combine("GameData", "HideEmptyTechTreeNodes"), hettnTechTreeName);
         internal static bool IsHettnUrlCreated = false;
 
         // Default and backup tech tree paths. Default is created once, on scene startup. (Add squad backup?)
         private static string defaultTechTreeUrl = string.Empty;
-        private static string backupTechTreeUrl = "GameData/ModuleManager.TechTree";
+        private static string backupTechTreeUrl = Path.Combine("GameData", "ModuleManager.TechTree");
 
         // Settings.
         internal HETTNSettings hettnSettings;
@@ -198,10 +204,10 @@ namespace HideEmptyTechTreeNodes
         #endregion
 
 
-        // ----------------------------------------------------
+        // -------------------------------------------------------------------
         // Goes through several logic conditions based on empty nodes and node 
         // positions to change node parents. Main plugin work is done here.
-        // ----------------------------------------------------
+        // -------------------------------------------------------------------
         #region NODE PARENT CHANGES
         public void ChangeParents()
         {
@@ -333,8 +339,11 @@ namespace HideEmptyTechTreeNodes
                     return;
                 }
 
-                // Set all nodes in loop to current hideIfNoParts setting setting.
-                rdNode.hideIfNoParts = hettnSettings.forceHideEmpty;
+                // Auto-hide all nodes unless manual hide option is enabled.
+                if (!hettnSettings.forceHideManual)
+                {
+                    rdNode.hideIfNoParts = hettnSettings.forceHideEmpty;
+                }
 
                 // PARTUPGRADE fix 2 of 2:
                 // Unless turned off in Advanced KSP settings, do not hide these tech tree nodes with only PARTUPGRADEs.
@@ -425,7 +434,16 @@ namespace HideEmptyTechTreeNodes
                 nodesList.Add(rdNodesDefaultList[i].techID, rdNodesDefaultList[i]);
                 positionsList.Add(rdNodesDefaultList[i].techID, rdNodesDefaultList[i].pos);
             }
-            
+
+            // Preload children
+            for (int i = 0; i < rdNodesDefaultList.Count; i++)
+            {
+                for (int j = 0; j < rdNodesDefaultList[i].parents.Count(); j++)
+                {
+                    nodesList[rdNodesDefaultList[i].parents[j].parentID].children.Add(rdNodesDefaultList[i].techID);
+                }
+            }
+
             // Debug and log output.
             HETTNSettings.Log2("RDNode config preload successful.");
             if (techRequiredList.Count > 0)
@@ -442,7 +460,7 @@ namespace HideEmptyTechTreeNodes
                 // Logic for rearranging parents starts here.
                 // Here, we iterate through EACH node and search for several conditions. The steps are:
                 // (0) Create output for debug HNSettings.log.
-                // (1) Check if node will be hidden (hideIfNoParts and no parts assigned to node).
+                // (1) Check if node will be hidden (and transfer science if option is enabled).
                 // (2) Preload parents of node to list.
                 // (3) Remove any hidden parents, and replace with those parents' parents. Remove duplictaes, etc.
                 // (4) Remove and replace parents that cause tech lines to intersect with other parents/nodes.
@@ -483,12 +501,96 @@ namespace HideEmptyTechTreeNodes
                     }
 
 
-                    // --------------------------------------------------------------------------------------------
+                    // ------------------------------------------------------------------------------------------
                     // (1) Check if node will be hidden.
-                    // If node is hidden (i.e. there are no parts and set to hide if no parts), just skip the rest.
-                    // --------------------------------------------------------------------------------------------
+                    // If node is hidden (i.e. there are no parts and set to hide if no parts), propagate science
+                    // (if enabled) and then just skip the rest.
+                    // ------------------------------------------------------------------------------------------
                     if (node.PartsInTotal < 1 && node.hideIfNoParts == true)
                     {
+                        // Propagate science points
+                        bool propagateScience = false;
+                        if (hettnSettings.propagateScience == Localizer.Format("#autoLOC_HETTN_01502")) //"Science Wall (Transfer to children)"
+                        {
+                            propagateScience = true;
+                            // Get unhidden children (too many nested statements?)
+                            bool isChildAdded = true;
+                            while (isChildAdded)
+                            {
+                                isChildAdded = false;
+                                List<string> childrenToAdd = new List<string>();
+                                List<string> childrenToRemove = new List<string>();
+
+                                // Add hidden childrens' children
+                                foreach (string child in node.children)
+                                {
+                                    HENode childNode = nodesList[child];
+                                    if (childNode.PartsInTotal < 1 && childNode.hideIfNoParts == true)
+                                    {
+                                        childrenToRemove.Add(childNode.techID);
+                                        foreach (string child2 in childNode.children)
+                                        {
+                                            if (!childrenToAdd.Contains(child2) && !node.children.Contains(child2))
+                                            {
+                                                childrenToAdd.Add(child2);
+                                                isChildAdded = true;
+                                            }
+                                        }
+                                    }
+                                }
+                                foreach (string child in childrenToRemove)
+                                    node.children.Remove(child);
+                                foreach (string child in childrenToAdd)
+                                    node.children.Add(child);
+                            }
+                        }
+                        else if (hettnSettings.propagateScience == Localizer.Format("#autoLOC_HETTN_01503")) //"Propagate Science (Transfer to all descendants)"
+                        {
+                            propagateScience = true;
+                            // Get unhidden children (too many nested statements?)
+                            bool isChildAdded = true;
+                            while (isChildAdded)
+                            {
+                                isChildAdded = false;
+                                List<string> childrenToAdd = new List<string>();
+                                List<string> childrenToRemove = new List<string>();
+
+                                // Add all nonhidden descendants
+                                foreach (string child in node.children)
+                                {
+                                    HENode childNode = nodesList[child];
+                                    if (childNode.PartsInTotal < 1 && childNode.hideIfNoParts == true)
+                                    {
+                                        childrenToRemove.Add(childNode.techID);
+                                    }
+                                    foreach (string child2 in childNode.children)
+                                    {
+                                        if (!childrenToAdd.Contains(child2) && !node.children.Contains(child2))
+                                        {
+                                            childrenToAdd.Add(child2);
+                                            isChildAdded = true;
+                                        }
+                                    }
+                                }
+                                foreach (string child in childrenToRemove)
+                                    node.children.Remove(child);
+                                foreach (string child in childrenToAdd)
+                                    node.children.Add(child);
+                            }
+                        }
+
+                        // Transfer science points to children (minimum 5 points)
+                        int numChildren = node.children.Count;
+                        if (propagateScience && numChildren > 0)
+                        {
+                            int scienceCost = Math.Max((int)Math.Ceiling((double)node.scienceCost / numChildren), 5);
+                            foreach (string child in node.children)
+                            {
+                                nodesList[child].scienceCost = 5 * (int)Math.Round((double)(nodesList[child].scienceCost + scienceCost) / 5.0);
+                            }
+                        }
+
+                        // Continue to next node in loop
                         hiddenNodesCount++;
                         continue;
                     }
@@ -502,10 +604,12 @@ namespace HideEmptyTechTreeNodes
                     List<HENode.Parent> tempParentsList = new List<HENode.Parent>();
                     List<HENode.Parent> parentsToRemove = new List<HENode.Parent>();
                     List<HENode.Parent> parentsToAdd = new List<HENode.Parent>();
+
                     // Initilize parameters to track number of added/removed parents.
                     addedParentsCount = 0;
                     removedParentsCount = 0;
                     removedParents = false;
+
                     // Preload parents.
                     foreach (HENode.Parent parent in node.parents)
                     {
@@ -1191,7 +1295,7 @@ namespace HideEmptyTechTreeNodes
                 posYList[i] = nodesList[i].pos.y;
             }
 
-            // Get mode of node positions.
+            // Get mode of all node positions.
             float modeX = ModeDiff(posXList);
             float modeY = ModeDiff(posYList);
 
@@ -1570,7 +1674,7 @@ namespace HideEmptyTechTreeNodes
         // ----------------------------------------------------
         public List<HENode> ReplaceGroupsX(List<HENode> nodesList, int i, int quadrant, float diffPosition)
         {
-            if (diffPosition != 0) ;
+            //if (diffPosition != 0) ;
             HETTNSettings.Log2("    Shifting group {1} by {0}...", i, diffPosition);
 
             GetSigns sign = new GetSigns(quadrant);
@@ -1584,7 +1688,7 @@ namespace HideEmptyTechTreeNodes
 
         public List<HENode> ReplaceGroupsY(List<HENode> nodesList, int i, int quadrant, float diffPosition)
         {
-            if (diffPosition != 0) ;
+            //if (diffPosition != 0) ;
             HETTNSettings.Log2("    Shifting group {1} by {0}...", i, diffPosition);
 
             GetSigns sign = new GetSigns(quadrant);
