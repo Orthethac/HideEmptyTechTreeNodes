@@ -1,3 +1,7 @@
 [Bb]in
 [Oo]bj
 *.suo
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
