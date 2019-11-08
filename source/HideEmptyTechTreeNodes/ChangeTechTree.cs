@@ -2,6 +2,8 @@
 // Goes through a bunch of conditions to change the parents from hidden tech nodes to ones that aren't.
 // Lots of debugging code, haha.
 //
+// v1.1.2 - 2019/11/07 - Recompiled for KSPv1.8.1; Changed Target Framework to .NET 4.5; Increased maximum allowable zoom to 200%; Added Russian localization (thx @Sooll3)
+// v1.1.1 - 2019/04/20 - Recompiled for KSPv1.7.0
 // v1.1.0 - 2018/01/12 - Recompiled for KSPv1.6.1; Added manual-hide option; Added science transfer option
 // v1.0.5 - 2018/10/27 - Recompiled for KSPv1.5.1
 // v1.0.4 - 2018/05/06 - Added .version file (no changes to any code)
@@ -50,7 +52,7 @@ namespace HideEmptyTechTreeNodes
         #region SETUP
         // Hide Empty Tech Tree Nodes tech tree file path.
         private static string hettnTechTreeName = "HETTN.TechTree";
-        private static string hettnTechTreeUrl = Path.Combine(Path.Combine("GameData", "HideEmptyTechTreeNodes"), hettnTechTreeName);
+        private static string hettnTechTreeUrl = Path.Combine(Path.Combine(Path.Combine("GameData", "HideEmptyTechTreeNodes"), "Resources"), hettnTechTreeName);
         internal static bool IsHettnUrlCreated = false;
 
         // Default and backup tech tree paths. Default is created once, on scene startup. (Add squad backup?)

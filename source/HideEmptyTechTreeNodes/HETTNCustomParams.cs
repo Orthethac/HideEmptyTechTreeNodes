@@ -110,7 +110,7 @@ namespace HideEmptyTechTreeNodes
         public float zoomSpeed = 0.05f;
 
         // "Maximum Zoom (%)", toolTip = "Sets the maximum scroll zoom when viewing the tech tree."
-        [GameParameters.CustomFloatParameterUI("#autoLOC_HETTN_01202", displayFormat = "N0", asPercentage = false, minValue = 60f, maxValue = 150f,
+        [GameParameters.CustomFloatParameterUI("#autoLOC_HETTN_01202", displayFormat = "N0", asPercentage = false, minValue = 60f, maxValue = 200f,
             toolTip = "#autoLOC_HETTN_01203")]
         public float zoomMaxParam
         {
