@@ -1,6 +1,6 @@
 {
     "NAME":"HideEmptyTechTreeNodes",
-    "URL":"https://raw.githubusercontent.com/Orthethac/HideEmptyTechTreeNodes/master/GameData/HideEmptyTechTreeNodes/HideEmptyTechTreeNodes.version",
+    "URL":"https://github.com/Orthethac/HideEmptyTechTreeNodes/raw/master/GameData/HideEmptyTechTreeNodes/Versioning/HideEmptyTechTreeNodes.version",
 	"DOWNLOAD":"https://github.com/Orthethac/HideEmptyTechTreeNodes/releases",
 	"GITHUB":{
         "USERNAME":"Orthethac",
