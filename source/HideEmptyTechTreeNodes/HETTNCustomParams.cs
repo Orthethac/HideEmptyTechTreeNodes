@@ -106,7 +106,7 @@ namespace HideEmptyTechTreeNodes
         public override int SectionOrder { get { return 2; } }
 
         public float zoomMax = 1.0f;
-        public float zoomMin = 0.35f;
+        public float zoomMin = 0.60f;
         public float zoomSpeed = 0.05f;
 
         // "Maximum Zoom (%)", toolTip = "Sets the maximum scroll zoom when viewing the tech tree."
@@ -139,7 +139,7 @@ namespace HideEmptyTechTreeNodes
         //public float zoomMax = 1.0f;
         //[GameParameters.CustomFloatParameterUI("Minimum Zoom", asPercentage = true, displayFormat = "N1", minValue = 0.05f, maxValue = 0.6f,
         //    toolTip = "Sets the minimum scroll zoom when viewing the tech tree.")]
-        //public float zoomMin = 0.35f;
+        //public float zoomMin = 0.60f;
         //[GameParameters.CustomFloatParameterUI("Zoom Speed", displayFormat = "N2", asPercentage = true, minValue = 0.01f, maxValue = 0.25f,
         //    toolTip = "Sets the zoom scroll speed when viewing the tech tree.")]
         //public float zoomSpeed = 0.05f;

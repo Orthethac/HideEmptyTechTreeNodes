@@ -28,7 +28,7 @@ namespace HideEmptyTechTreeNodes
         internal bool shiftHorizontally = false;
 
         internal float zoomMax = 1.0f;
-        internal float zoomMin = 0.35f;
+        internal float zoomMin = 0.60f;
         internal float zoomSpeed = 0.05f;
 
         internal static bool debugging = false;

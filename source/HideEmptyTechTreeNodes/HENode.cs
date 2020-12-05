@@ -58,7 +58,7 @@ namespace HideEmptyTechTreeNodes
             int count = partsList.Count;
             for (int i = 0; i < count; i++)
             {
-                if (partsList[i].TechRequired == this.techID)
+                if (partsList[i].TechRequired == this.techID && !partsList[i].TechHidden)
                 {
                     this.partsAssigned.Add(partsList[i]);
                 }

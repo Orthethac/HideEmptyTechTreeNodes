@@ -2,6 +2,7 @@
 // Goes through a bunch of conditions to change the parents from hidden tech nodes to ones that aren't.
 // Lots of debugging code, haha.
 //
+// v1.2.0 - 2020/12/04 - Recompiled for KSPv1.10.1; Fixed depricated parts counting towards total parts in nodes, causing empty nodes; Reverted min zooom to stock 60% value.
 // v1.1.2 - 2019/11/07 - Recompiled for KSPv1.8.1; Changed Target Framework to .NET 4.5; Increased maximum allowable zoom to 200%; Added Russian localization (thx @Sooll3)
 // v1.1.1 - 2019/04/20 - Recompiled for KSPv1.7.0
 // v1.1.0 - 2018/01/12 - Recompiled for KSPv1.6.1; Added manual-hide option; Added science transfer option
