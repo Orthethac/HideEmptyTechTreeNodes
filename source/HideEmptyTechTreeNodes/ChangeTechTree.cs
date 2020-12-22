@@ -2,7 +2,7 @@
 // Goes through a bunch of conditions to change the parents from hidden tech nodes to ones that aren't.
 // Lots of debugging code, haha.
 //
-// v1.3.0 - 2020/12/21 - Recompiled for KSPv1.11.0; Fixed Propagate Science option getting stuck in infite loop
+// v1.3.0 - 2020/12/21 - Recompiled for KSPv1.11.0; Fixed HETTN tech tree node loading properly in KSPv1.11; Fixed Propagate Science option getting stuck in infite loop
 // v1.2.0 - 2020/12/04 - Recompiled for KSPv1.10.1; Fixed depricated parts counting towards total parts in nodes, causing empty nodes; Reverted min zooom to stock 60% value.
 // v1.1.2 - 2019/11/07 - Recompiled for KSPv1.8.1; Changed Target Framework to .NET 4.5; Increased maximum allowable zoom to 200%; Added Russian localization (thx @Sooll3)
 // v1.1.1 - 2019/04/20 - Recompiled for KSPv1.7.0
