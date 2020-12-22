@@ -516,15 +516,16 @@ namespace HideEmptyTechTreeNodes
                         if (hettnSettings.propagateScience == Localizer.Format("#autoLOC_HETTN_01502")) //"Science Wall (Transfer to children)"
                         {
                             propagateScience = true;
-                            // Get unhidden children (too many nested statements?)
+
                             bool isChildAdded = true;
+
+                            // Add hidden childrens' children
                             while (isChildAdded)
                             {
                                 isChildAdded = false;
                                 List<string> childrenToAdd = new List<string>();
                                 List<string> childrenToRemove = new List<string>();
 
-                                // Add hidden childrens' children
                                 foreach (string child in node.children)
                                 {
                                     HENode childNode = nodesList[child];
@@ -541,6 +542,7 @@ namespace HideEmptyTechTreeNodes
                                         }
                                     }
                                 }
+
                                 foreach (string child in childrenToRemove)
                                     node.children.Remove(child);
                                 foreach (string child in childrenToAdd)
@@ -550,19 +552,20 @@ namespace HideEmptyTechTreeNodes
                         else if (hettnSettings.propagateScience == Localizer.Format("#autoLOC_HETTN_01503")) //"Propagate Science (Transfer to all descendants)"
                         {
                             propagateScience = true;
-                            // Get unhidden children (too many nested statements?)
+
                             bool isChildAdded = true;
+                            List<string> childrenToRemove = new List<string>();
+
+                            // Add all descendants, initially, and mark and remove hidden descendants
                             while (isChildAdded)
                             {
                                 isChildAdded = false;
                                 List<string> childrenToAdd = new List<string>();
-                                List<string> childrenToRemove = new List<string>();
 
-                                // Add all nonhidden descendants
                                 foreach (string child in node.children)
                                 {
                                     HENode childNode = nodesList[child];
-                                    if (childNode.PartsInTotal < 1 && childNode.hideIfNoParts == true)
+                                    if (!childrenToRemove.Contains(childNode.techID) && childNode.PartsInTotal < 1 && childNode.hideIfNoParts == true)
                                     {
                                         childrenToRemove.Add(childNode.techID);
                                     }
@@ -575,11 +578,14 @@ namespace HideEmptyTechTreeNodes
                                         }
                                     }
                                 }
-                                foreach (string child in childrenToRemove)
-                                    node.children.Remove(child);
+
                                 foreach (string child in childrenToAdd)
                                     node.children.Add(child);
                             }
+
+                            // Remove hidden descendants
+                            foreach (string child in childrenToRemove)
+                                node.children.Remove(child);
                         }
 
                         // Transfer science points to children (minimum 5 points)
