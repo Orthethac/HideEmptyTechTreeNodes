@@ -10,6 +10,8 @@ namespace HideEmptyTechTreeNodes
     {
         public string techID;
 
+        public float tier = -1; // KTT compatibility.
+
         public string title;
 
         public string description;
@@ -71,6 +73,10 @@ namespace HideEmptyTechTreeNodes
             // RDNode keys.
             if (node.HasValue("id"))
                 this.techID = node.GetValue("id");
+
+            // KTT compatibility.
+            if (node.HasValue("tier"))
+                this.tier = float.Parse(node.GetValue("tier"));
 
             if (node.HasValue("title"))
                 this.title = node.GetValue("title");
@@ -142,6 +148,7 @@ namespace HideEmptyTechTreeNodes
             if (node == null)
                 HETTNSettings.Log("test11");
             node.AddValue("id", this.techID);
+            node.AddValue("tier", this.tier); // KTT compatibility.
             node.AddValue("title", this.title);
             node.AddValue("description", this.description);
             node.AddValue("cost", this.scienceCost);
