@@ -295,6 +295,9 @@ namespace HideEmptyTechTreeNodes
             int duplicateIDCount = 0;
             List<string> duplicateIDList = new List<string>();
 
+            // KTT compatibility.
+            // Max tier.
+            int maxTier = -1;
 
             // ETT fix 3 of 3.
             // ----------------------------------------------------------------------
@@ -304,6 +307,7 @@ namespace HideEmptyTechTreeNodes
             bool HasUnlocks = false;
             for (int i = 0; i < configRDNodes.Length; i++)
             {
+                HETTNSettings.Log2("Hello");
                 // Load config node.
                 HENode rdNode = new HENode();
                 rdNode.Load(configRDNodes[i]);
@@ -427,6 +431,13 @@ namespace HideEmptyTechTreeNodes
                     rdNode.PartsInTotal = rdNode.partsAssigned.Count;
                 }
 
+                // KTT Compatibility.
+                // Save the max unhidden tier.
+                if (!rdNode.hideIfNoParts && (int)rdNode.tier > maxTier)
+                {
+                    maxTier = (int)rdNode.tier;
+                }
+
                 // Add the nodes to a default list.
                 rdNodesDefaultList.Add(rdNode);
 
@@ -452,6 +463,32 @@ namespace HideEmptyTechTreeNodes
                 HETTNSettings.LogError("Failed to find start node. Exiting plugin...");
                 HighLogic.CurrentGame.Parameters.Career.TechTreeUrl = defaultTechTreeUrl;
                 return;
+            }
+
+            // KTT Compatibility.
+            // Find tier node labels and unhide.
+            HETTNSettings.Log2("KTT Max Tier: {0}", maxTier);
+            if (!hettnSettings.forceHideManual && maxTier > -1)
+            {
+                for (int i = 0; i < rdNodesDefaultList.Count; i++)
+                {
+                    // Skip tiers higher than max tier. These are hidden nodes.
+                    if (maxTier < (int)rdNodesDefaultList[i].tier)
+                    {
+                        continue;
+                    }
+
+                    // Match against valid strings.
+                    string tierID = string.Format("tier{0}", (int)rdNodesDefaultList[i].tier);
+                    bool isLabel = string.Equals(tierID, rdNodesDefaultList[i].techID, StringComparison.OrdinalIgnoreCase);
+                    bool isLabelTop = string.Equals(tierID + "_top", rdNodesDefaultList[i].techID, StringComparison.OrdinalIgnoreCase);
+                    bool isLabelBottom = string.Equals(tierID + "_bottom", rdNodesDefaultList[i].techID, StringComparison.OrdinalIgnoreCase);
+                    if (isLabel || isLabelTop || isLabelBottom)
+                    {
+                        HETTNSettings.Log2("KTT ID {0}", rdNodesDefaultList[i].techID);
+                        rdNodesDefaultList[i].hideIfNoParts = false;
+                    }
+                }
             }
 
             // Preload parent nodes.
