@@ -2,6 +2,7 @@
 // Goes through a bunch of conditions to change the parents from hidden tech nodes to ones that aren't.
 // Lots of debugging code, haha.
 //
+// v1.3.0 - 2020/12/21 - Recompiled for KSPv1.11.0; Fixed HETTN tech tree node loading properly in KSPv1.11; Fixed Propagate Science option getting stuck in infite loop
 // v1.2.0 - 2020/12/04 - Recompiled for KSPv1.10.1; Fixed depricated parts counting towards total parts in nodes, causing empty nodes; Reverted min zooom to stock 60% value.
 // v1.1.2 - 2019/11/07 - Recompiled for KSPv1.8.1; Changed Target Framework to .NET 4.5; Increased maximum allowable zoom to 200%; Added Russian localization (thx @Sooll3)
 // v1.1.1 - 2019/04/20 - Recompiled for KSPv1.7.0
@@ -115,6 +116,7 @@ namespace HideEmptyTechTreeNodes
                 HETTNSettings.Log2("Loading...");
                 SetDefaultTechTreeUrl();
                 ChangeParents();
+                RepopulateTechTreeNode();
                 HETTNSettings.Log2("Finished assigning new tech tree.");
             }
             else
@@ -122,11 +124,15 @@ namespace HideEmptyTechTreeNodes
                 if (HighLogic.CurrentGame.Parameters.Career.TechTreeUrl != hettnTechTreeUrl)
                 {
                     HighLogic.CurrentGame.Parameters.Career.TechTreeUrl = hettnTechTreeUrl;
-                }
-                if (String.IsNullOrEmpty(HighLogic.CurrentGame.Parameters.Career.TechTreeUrl))
-                {
-                    HETTNSettings.LogError("Could not find tech tree. Using default path.");
-                    HighLogic.CurrentGame.Parameters.Career.TechTreeUrl = defaultTechTreeUrl;
+                    if (String.IsNullOrEmpty(HighLogic.CurrentGame.Parameters.Career.TechTreeUrl))
+                    {
+                        HETTNSettings.LogError("Could not find tech tree. Using default path.");
+                        HighLogic.CurrentGame.Parameters.Career.TechTreeUrl = defaultTechTreeUrl;
+                    }
+                    else
+                    {
+                        RepopulateTechTreeNode();
+                    }
                 }
                 HETTNSettings.Log2("Default tech tree path: {0}.", defaultTechTreeUrl);
                 HETTNSettings.Log2("Current tech tree path: {0}.", HighLogic.CurrentGame.Parameters.Career.TechTreeUrl);
@@ -142,6 +148,7 @@ namespace HideEmptyTechTreeNodes
             {
                 HETTNSettings.Log("ETT fix: Tech Tree url was changed. Respawning using HETTN.TechTree...");
                 HighLogic.CurrentGame.Parameters.Career.TechTreeUrl = hettnTechTreeUrl;
+                RepopulateTechTreeNode();
                 rdTechTree.ReLoad();
                 rdTechTree.SpawnTechTreeNodes();
             }
@@ -180,6 +187,7 @@ namespace HideEmptyTechTreeNodes
                     NewNodeSettings.shiftVertically ? String.Format("enabled") : String.Format("disabled"),
                     NewNodeSettings.shiftHorizontally ? String.Format("enabled") : String.Format("disabled"));
                 ChangeParents();
+                RepopulateTechTreeNode();
             }
         }
         #endregion
@@ -203,6 +211,38 @@ namespace HideEmptyTechTreeNodes
             }
             HETTNSettings.Log2("Default tech tree path: {0}.", defaultTechTreeUrl);
             HETTNSettings.Log2("Current tech tree path: {0}.", HighLogic.CurrentGame.Parameters.Career.TechTreeUrl);
+        }
+        #endregion
+
+
+        // ---------------------------------------------------
+        // Method to repopulate TechTree node with HETTN file.
+        // Note: Required from KSP v1.11.0
+        // ---------------------------------------------------
+        #region REPOPULATE TECH TREE NODE
+        public static void RepopulateTechTreeNode()
+        {
+            HETTNSettings.Log("Repopulating instanced TechTree Node...");
+
+            // Load RDNodes from HETTN tech tree path.
+            ConfigNode configFile = ConfigNode.Load(HighLogic.CurrentGame.Parameters.Career.TechTreeUrl);
+            ConfigNode configTechTree = configFile.GetNode("TechTree");
+            ConfigNode[] configRDNodes = configTechTree.GetNodes("RDNode");
+
+            // Get instanced TechTree nodes.
+            ConfigNode[] instanceTechTreeNodes = GameDatabase.Instance.GetConfigNodes("TechTree");
+
+            // Clear all instanced TechTree nodes.
+            for (int i = 0; i < instanceTechTreeNodes.Length; i++)
+            {
+                instanceTechTreeNodes[i].ClearNodes();
+            }
+
+            // Repopulate the first TechTree node with HETTN's RDNodes.
+            for (int i = 0; i < configRDNodes.Length; i++)
+            {
+                instanceTechTreeNodes[0].AddNode(configRDNodes[i]);
+            }
         }
         #endregion
 
@@ -516,15 +556,16 @@ namespace HideEmptyTechTreeNodes
                         if (hettnSettings.propagateScience == Localizer.Format("#autoLOC_HETTN_01502")) //"Science Wall (Transfer to children)"
                         {
                             propagateScience = true;
-                            // Get unhidden children (too many nested statements?)
+
                             bool isChildAdded = true;
+
+                            // Add hidden childrens' children
                             while (isChildAdded)
                             {
                                 isChildAdded = false;
                                 List<string> childrenToAdd = new List<string>();
                                 List<string> childrenToRemove = new List<string>();
 
-                                // Add hidden childrens' children
                                 foreach (string child in node.children)
                                 {
                                     HENode childNode = nodesList[child];
@@ -541,6 +582,7 @@ namespace HideEmptyTechTreeNodes
                                         }
                                     }
                                 }
+
                                 foreach (string child in childrenToRemove)
                                     node.children.Remove(child);
                                 foreach (string child in childrenToAdd)
@@ -550,19 +592,20 @@ namespace HideEmptyTechTreeNodes
                         else if (hettnSettings.propagateScience == Localizer.Format("#autoLOC_HETTN_01503")) //"Propagate Science (Transfer to all descendants)"
                         {
                             propagateScience = true;
-                            // Get unhidden children (too many nested statements?)
+
                             bool isChildAdded = true;
+                            List<string> childrenToRemove = new List<string>();
+
+                            // Add all descendants, initially, and mark and remove hidden descendants
                             while (isChildAdded)
                             {
                                 isChildAdded = false;
                                 List<string> childrenToAdd = new List<string>();
-                                List<string> childrenToRemove = new List<string>();
 
-                                // Add all nonhidden descendants
                                 foreach (string child in node.children)
                                 {
                                     HENode childNode = nodesList[child];
-                                    if (childNode.PartsInTotal < 1 && childNode.hideIfNoParts == true)
+                                    if (!childrenToRemove.Contains(childNode.techID) && childNode.PartsInTotal < 1 && childNode.hideIfNoParts == true)
                                     {
                                         childrenToRemove.Add(childNode.techID);
                                     }
@@ -575,11 +618,14 @@ namespace HideEmptyTechTreeNodes
                                         }
                                     }
                                 }
-                                foreach (string child in childrenToRemove)
-                                    node.children.Remove(child);
+
                                 foreach (string child in childrenToAdd)
                                     node.children.Add(child);
                             }
+
+                            // Remove hidden descendants
+                            foreach (string child in childrenToRemove)
+                                node.children.Remove(child);
                         }
 
                         // Transfer science points to children (minimum 5 points)
