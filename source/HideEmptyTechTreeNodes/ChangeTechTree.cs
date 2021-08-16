@@ -2,7 +2,7 @@
 // Goes through a bunch of conditions to change the parents from hidden tech nodes to ones that aren't.
 // Lots of debugging code, haha.
 //
-// v1.3.0 - 2020/12/21 - Recompiled for KSPv1.11.0; Fixed HETTN tech tree node loading properly in KSPv1.11; Fixed Propagate Science option getting stuck in infite loop
+// v1.3.0 - 2021/01/17 - Recompiled for KSPv1.11.0; Fixed HETTN tech tree node loading properly in KSPv1.11; Fixed Propagate Science option getting stuck in infite loop; Added compatibility for KTT to show tier label nodes by default; Fixed duplicate node handling
 // v1.2.0 - 2020/12/04 - Recompiled for KSPv1.10.1; Fixed depricated parts counting towards total parts in nodes, causing empty nodes; Reverted min zooom to stock 60% value.
 // v1.1.2 - 2019/11/07 - Recompiled for KSPv1.8.1; Changed Target Framework to .NET 4.5; Increased maximum allowable zoom to 200%; Added Russian localization (thx @Sooll3)
 // v1.1.1 - 2019/04/20 - Recompiled for KSPv1.7.0
@@ -75,6 +75,8 @@ namespace HideEmptyTechTreeNodes
         internal static int maxParents = 3;
         internal static double dividePosGroupCount = 6;
 
+        // Error message.
+        internal ScreenMessage hettnErrorMessage = new ScreenMessage("", 20f, ScreenMessageStyle.UPPER_CENTER);
         #endregion
 
 
@@ -144,6 +146,7 @@ namespace HideEmptyTechTreeNodes
         // Check if current tech tree path is set to EngTechTree. Recreate tech tree from this path, reload and respawn new tree.
         private void onTechTreeSpawn(RDTechTree rdTechTree)
         {
+            ScreenMessages.PostScreenMessage(hettnErrorMessage);
             if (HighLogic.CurrentGame.Parameters.Career.TechTreeUrl != hettnTechTreeUrl)
             {
                 HETTNSettings.Log("ETT fix: Tech Tree url was changed. Respawning using HETTN.TechTree...");
@@ -223,9 +226,10 @@ namespace HideEmptyTechTreeNodes
         public static void RepopulateTechTreeNode()
         {
             HETTNSettings.Log("Repopulating instanced TechTree Node...");
+            HETTNSettings.Log("{0}", HighLogic.CurrentGame.Parameters.Career.TechTreeUrl);
 
             // Load RDNodes from HETTN tech tree path.
-            ConfigNode configFile = ConfigNode.Load(HighLogic.CurrentGame.Parameters.Career.TechTreeUrl);
+            ConfigNode configFile = ConfigNode.Load(KSPUtil.ApplicationRootPath + HighLogic.CurrentGame.Parameters.Career.TechTreeUrl);
             ConfigNode configTechTree = configFile.GetNode("TechTree");
             ConfigNode[] configRDNodes = configTechTree.GetNodes("RDNode");
 
@@ -272,7 +276,8 @@ namespace HideEmptyTechTreeNodes
             ConfigNode configTechTree = configFile.GetNode("TechTree");
             ConfigNode[] configRDNodes = configTechTree.GetNodes("RDNode");
 
-            // Lists for RDNodes in default tech tree and for new HETTN teach tree.
+            // Lists for RDNodes in default tech tree and for new HETTN tech tree.
+            List<string> techIDList = new List<string>();
             List<HENode> rdNodesDefaultList = new List<HENode>();
             List<HENode> rdNodesNewList = new List<HENode>();
 
@@ -369,7 +374,6 @@ namespace HideEmptyTechTreeNodes
                 HETTNSettings.Log("PARTUPGRADEs are not enabled. Enable in Advanced KSP settings if desired.");
             }
 
-
             // -------------------------------------------------
             // Preload RDNode config nodes, and find start node.
             // -------------------------------------------------
@@ -421,8 +425,9 @@ namespace HideEmptyTechTreeNodes
                 }
 
                 // Check if RDNode node already exists by id.
-                if (nodesList.ContainsKey(rdNode.techID))
+                if (techIDList.Contains(rdNode.techID))
                 {
+                    HETTNSettings.Log2("Duplicate: {0}", rdNode.techID);
                     duplicateIDCount++;
                     duplicateIDList.Add(rdNode.techID);
                     rdNode.techID = String.Concat(rdNode.techID, "Dup", duplicateIDCount);
@@ -439,6 +444,7 @@ namespace HideEmptyTechTreeNodes
                 }
 
                 // Add the nodes to a default list.
+                techIDList.Add(rdNode.techID);
                 rdNodesDefaultList.Add(rdNode);
 
                 //HETTNSettings.Log2("RDNode: \"{0}\"\n Title: {1}\n Description: {2}\n Cost: {3}\n HideEmpty: {4}\n Name: {5}\n Unlock: {6}\n Icon: {7}\n Pos: {8}\n Group: {9}\n Scale: {10}\n NumOfParts: {11}\n NumOfParents: {12}.",
@@ -457,9 +463,18 @@ namespace HideEmptyTechTreeNodes
                 //                    rdNode.parents.Length);
             }
 
+            // Set log and on screen error messages for duplicate nodes.
+            if (duplicateIDCount > 0)
+            {
+                hettnErrorMessage.message = "Tech tree has " + duplicateIDCount + " nodes with duplicate IDs\n\nYou may have incompatible mods installed. See the debug log (Alt+F12) to see list of IDs, and check your mod files to attempt to resolve the issue.";
+                HETTNSettings.LogError("Duplicate tech nodes exists with the following IDs:\n   {0}\nYou may have incompatible mods installed. Check your mod files for the duplicate nodes and attempt to resolve issue. The duplicate nodes are not added to the new tree, but may have modified node position, cost, Parent links, etc.",
+                    String.Join("\n   ", duplicateIDList.ToArray()));
+            }
+
             // Give error here if start node was not found.
             if (!startExists)
             {
+                hettnErrorMessage.message = "Failed to find start node.";
                 HETTNSettings.LogError("Failed to find start node. Exiting plugin...");
                 HighLogic.CurrentGame.Parameters.Career.TechTreeUrl = defaultTechTreeUrl;
                 return;
@@ -520,7 +535,10 @@ namespace HideEmptyTechTreeNodes
             {
                 for (int j = 0; j < rdNodesDefaultList[i].parents.Count(); j++)
                 {
-                    nodesList[rdNodesDefaultList[i].parents[j].parentID].children.Add(rdNodesDefaultList[i].techID);
+                    if (nodesList.ContainsKey(rdNodesDefaultList[i].parents[j].parentID))
+                    {
+                        nodesList[rdNodesDefaultList[i].parents[j].parentID].children.Add(rdNodesDefaultList[i].techID);
+                    }
                 }
             }
 
@@ -1001,17 +1019,6 @@ namespace HideEmptyTechTreeNodes
                 // Set new list to default list (modified in preload) if no nodes are hidden.
                 HETTNSettings.Log2("Hide Empty Nodes setting is disabled");
                 rdNodesNewList = rdNodesDefaultList;
-            }
-
-
-            // --------------------------
-            // Log error display message.
-            // --------------------------
-            if (duplicateIDCount > 0)
-            {
-                HETTNSettings.LogError("Duplicate tech nodes exists with the following IDs:\n   {0}\nCheck your mod files for the duplicate nodes and consider contacting the modder(s) to resolve issue. This is for the default ModuleManager tree, not the new HETTN tree with hidden empty nodes. The duplicate nodes are not added to the new tree, but may have modified node position, cost, Parent links, etc.",
-                    String.Join("\n   ", duplicateIDList.ToArray()));
-                ScreenMessages.PostScreenMessage("<color=orange>Error: Tech tree has " + duplicateIDCount + " nodes with duplicate IDs\n\nSee debug log (Alt+F12) to see list of IDs.\n\nThen check your mod files for the duplicate nodes and consider contacting the modder(s) to resolve the issue.</color>", 20f, ScreenMessageStyle.UPPER_CENTER);
             }
 
 
